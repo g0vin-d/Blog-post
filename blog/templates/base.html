@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block staticLink %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock %}
+
+    {% block title %}
+        <title>Blog | </title>
+    {% endblock %}
+</head>
+<body>
+    <div class="container">
+        {% block navbar %}
+            <header class="header">
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item nav__item--1"><h4><a href="#" class="nav__link">Blog Post</a></h4></li>
+                        <li class="nav__item nav__item--1"><a href="#" class="nav__link">Home</a></li>
+                        <li class="nav__item nav__item--2"><a href="#" class="nav__link">About</a></li>
+                        <li class="nav__item nav__item--3"><a href="#" class="nav__link">Profile</a></li>
+                        <li class="nav__item nav__item--4"><a href="#" class="nav__link">Log In</a></li>
+                    </ul>
+                </nav>
+            </header>
+        {% endblock %}
+
+        {% block content %}
+        {% endblock %}
+        <footer class="footer">
+            footer
+        </footer>
+    </div>
+</body>
+</html>
