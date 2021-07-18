@@ -1,0 +1,62 @@
+// COLORS
+
+$accent-color:         #FF5252;
+$divider-color:        #BDBDBD;
+
+$color-primary: #26a3a1;
+$color-primary-light: #42bd9f;
+$color-primary-dark : #338897;
+// $color-primary : #338897;
+// $color-primary-light : #4DA6A3;
+// $color-primary-dark : #2B6586;
+
+$color-primary-text:   #FFFFFF;
+$secondary-text-color: #757575;
+$primary-text-color:   #212121;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+$color-grey-light-3: #707070;
+
+$color-grey-dark-1: #423e3a;
+$color-grey-dark-2: #2a2825;
+
+
+
+$color-grey-1: #999999;
+$color-grey-2: #777777; 	
+$color-grey-3: #555555;	
+$color-grey-4: #333333; 	
+$color-grey-5: #111111; 	
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;  // 1rem = 10px;
+}
+
+
+body {
+    font-family: sans-serif;
+    color: $color-grey-dark-2;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.container{
+    display: grid;
+
+    grid-template-columns: [full-start] 1fr repeat(8, [col-start] 14rem [col-end]) 1fr [full-end];
+    grid-template-rows: 6rem max-content;
+    align-items: start;
+    
+    grid-gap: 1.5rem;
+}

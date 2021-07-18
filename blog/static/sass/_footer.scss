@@ -1,0 +1,9 @@
+.footer {
+    grid-column: full-start/ full-end;
+    grid-row: 3 / 4;
+    display: none;
+
+    // background-color: $color-grey-dark-1;
+    background-color: $color-primary-light;
+    color: #fff;
+}
