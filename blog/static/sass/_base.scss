@@ -54,9 +54,9 @@ body {
 .container{
     display: grid;
 
-    grid-template-columns: [full-start] 1fr repeat(8, [col-start] 14rem [col-end]) 1fr [full-end];
+    grid-template-columns: [full-start] 1fr repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) 1fr [full-end];
     grid-template-rows: 6rem max-content;
     align-items: start;
     
-    grid-gap: 1.5rem;
+    grid-gap: 2rem;
 }

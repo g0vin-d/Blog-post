@@ -1,0 +1,46 @@
+.heading {
+    font-weight: 400;
+
+
+    &-5 {
+        font-size: 3rem;
+        color: $color-primary;
+    }
+}
+
+
+.text-muted {
+    font-size: 1.3rem;
+    color: $color-primary;
+
+    &__link {
+        text-decoration: none;
+        color: $color-primary;
+        border: none;
+        border-bottom: 2px solid transparent;
+        transition: all .3s;
+        display: inline-block;
+
+
+        &:hover {
+            border-bottom: 2px solid $color-primary-dark;
+            transform: scale(1.04);
+        }
+    }
+}
+
+
+.alert {
+    font-size: 1.5rem;
+    color: $color-primary;
+    border-bottom: 2px solid $color-primary-dark;
+    display: inline-block;
+}
+
+
+
+
+.mb-sm { margin-bottom: 1rem;}
+.mb-md { margin-bottom: 2rem;}
+.mb-lg { margin-bottom: 4rem;}
+.mb-hg { margin-bottom: 8rem;}

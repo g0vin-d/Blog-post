@@ -1,13 +1,12 @@
 .header {
-    background-color: $color-primary;
-    background-image: linear-gradient(to right, $color-primary-light, $color-primary);
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
     grid-column: full-start / full-end;
 
 }
 .nav {
 
     padding: 2rem;
-    max-width: 92rem;
+    max-width: 98rem;
 
     // height: 6rem; 
     // margin: 2rem auto 0 auto;

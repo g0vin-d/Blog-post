@@ -1,0 +1,116 @@
+.form-section {
+
+    grid-column: col-start 2 / col-end 7;
+    grid-row: 2 / 3;
+
+    margin: 2rem;
+    border: 3px solid $color-primary-light;
+    overflow: hidden;
+    border-radius: 10px;
+    color: $color-primary;
+    background-image: linear-gradient(to right, rgba(#eee, .7), rgba(#eee, .7));
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &__left {
+        background-image:url(../img/5.jpg);
+        clip-path: polygon(0 0, 100% 0, 100% 10%, 90% 15%, 100% 20%, 100% 100%, 0 100%);
+        background-size: cover;
+        background-position: top;
+    }
+
+    &__right {
+
+        // padding: 3rem;
+
+        display: flex;
+        justify-content: center;
+        color: #fff;
+
+    }
+}
+
+.post-form-section {
+    grid-column: col-start 3 / col-end 6;
+    grid-row: 2 / 3;
+
+    background-image: linear-gradient(to right, rgba(#eee, .5), rgba(#eee, .5));
+    padding: 4rem;
+    border-radius: 5px;
+    border: 3px solid $color-primary-light;
+}
+
+.post-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 1rem;
+
+}
+
+.form {
+    display: grid;
+    padding: 3rem 0;
+    grid-template-columns: 1fr;
+    grid-row-gap: 1.5rem;
+    width: 70%;
+    // text-align: center;
+    justify-items: center;
+    // justify-content: center;
+
+    &__group {
+        // display: flex;
+        // flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    &__input,
+    &__textarea{
+        font-family: inherit;
+        font-size: 1.5rem;
+        padding: 1.5rem 3rem;
+        border: none;
+        outline: none;
+        border-radius: 3px;
+        color: $color-primary;
+        background-color: rgba(#fff, 1);
+        display: block;
+        border-bottom: 3px solid transparent;
+        transition: all .3s;
+
+        &:focus {
+            outline: none;
+            border-bottom: 3px solid $color-primary;
+            box-shadow: 0 2rem 4rem rgba(#000, .1);
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid $accent-color;
+        }
+
+    }
+
+    &__label {
+        padding: 0 3rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-top: .7rem;
+        transition: all .5s;
+        color: $color-primary;
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+    &__textarea:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+
+}

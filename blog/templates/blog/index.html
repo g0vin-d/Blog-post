@@ -1,0 +1,24 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+    <title>Blog | Home</title>
+{% endblock %}
+
+{% block content %}
+    <div class="blogs">
+        {% for post in posts %}
+        <div class="blog">
+            <div class="blog__box">
+                <div class="blog__user">
+                    <p class="blog__author">{{ post.author }}</p>
+                    <p class="blog__udate">{{post.date_posted | date:"F d Y h i A"}}</p>
+                </div>
+                <h4 class="blog__title"><a href="{% url 'blog:details' post.id %}" class="blog__link">{{ post.title }}</a></h4>
+                <p class="blog__content">{{post.content}}</p>
+            </div>
+        </div>
+        {% endfor %}
+        
+    </div>
+{% endblock %}
+    

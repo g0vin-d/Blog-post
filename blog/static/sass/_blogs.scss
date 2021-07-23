@@ -14,6 +14,7 @@
 .blog {
     background-color: $color-grey-light-1;
     padding: 1rem;
+    border-radius: 3px;
 
 
     &__user{
@@ -24,6 +25,7 @@
 
     &__author{
         font-size: 1.5rem;
+        margin-right: auto;
         color: $color-primary;
     }
 
@@ -34,11 +36,6 @@
         margin-top: .5rem;
     }
 
-    &__utime {
-        font-size: .9rem;
-        color: $color-grey-light-3;
-    }
-
     &__box {
         display: grid;
         grid-template-columns: 1fr;
@@ -47,7 +44,22 @@
     &__title {
         font-size: 1.9rem;
         color: $color-grey-3;
-        margin: .5rem  0;
+        margin: .7rem  0;
+    }
+
+    &__link {
+        &:link, &:visited {
+            text-decoration: none;
+            color: $color-grey-3;
+            border-bottom: 1px solid transparent;
+            padding-bottom: .5rem;
+            transition: all .2s;
+        }
+
+        &:hover {
+            border-bottom: 2px solid $color-primary;
+            color: $color-primary;
+        }
     }
 
     &__content {

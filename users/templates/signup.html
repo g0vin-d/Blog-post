@@ -1,0 +1,45 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+    <title>Blog | Sign up</title>
+{% endblock %}
+
+{% block content %}
+    <div class="form-section">
+        <div class="form-section__left">
+
+        </div>
+        <div class="form-section__right">
+            <form class="form" method="POST" action="#">
+                {% csrf_token %}
+                <h5 class="heading-5 mb-md"> Create Account </h5>
+                {% for field in form %}
+                    <div class="form__group">
+                        {{ field }}
+                        <label for="{{field.auto_id}}" class="form__label">{{field.label}}</label>
+                    </div>
+                {% endfor %}
+                <p class="text-muted mb-md">Already have an account? &nbsp;<a href="{% url 'loginPage' %}" class="text-muted__link"> Log in &rarr;</a></p>
+                <div class="form_group">
+                    <button type="submit" class="btn btn__submit">Sign up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        let form_fields = document.getElementsByTagName('input')
+
+        form_fields[1].placeholder = "Username";
+        form_fields[2].placeholder = "Email";
+        form_fields[3].placeholder = "Password";
+        form_fields[4].placeholder = "Confirm passowrd";
+
+        for (let field in form_fields){
+            form_fields[field].classList += ' form__input'
+        }
+    </script>
+{% endblock %}
+
+{% block sidebar %}
+
+{% endblock%}

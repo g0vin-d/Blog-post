@@ -1,0 +1,39 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+    <title>Blog | Log in</title>
+{% endblock %}
+
+{% block content %}
+    <div class="form-section">
+        <div class="form-section__left">
+
+        </div>
+        <div class="form-section__right">
+            <form action="#" method="POST" class="form">
+                {% csrf_token %}
+                <h5 class="heading-5 mb-md"> Welcome Back! </h5>
+                {% if messages %}
+                    {% for message in messages %}
+                        <p class="alert alert-success mb-sm">{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+                <div class="form__group">
+                    <input type="text" class="form__input" id="username" name="username" placeholder="Username">
+                    <label for="username" class="form__label">Username</label>
+                </div>
+                <div class="form__group">
+                    <input type="password" class="form__input" id="passwd" name="passwd" placeholder="Password">
+                    <label for="passwd" class="form__label">Password</label>
+                </div>
+                <p class="text-muted mb-md">Need an account? &nbsp;<a href="{% url 'signup' %}" class="text-muted__link"> Sign up &rarr;</a></p>
+                <div class="form_group">
+                    <button type="submit" class="btn btn__submit">Log in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+{% block sidebar %}
+
+{% endblock%}
